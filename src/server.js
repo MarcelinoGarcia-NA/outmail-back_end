@@ -4,7 +4,7 @@ const routes = require("./routes");
 const cors= require("cors");
 const multer = require('multer');
 const upload = multer({ dest: 'uploads/' });
-const PORT = process.env.PORT || 3333;
+const PORT = process.env.PORT || 3000;
 mongoose.connect("mongodb://localhost:27017/project_email",{
     useNewUrlParser:true,
     useUnifiedTopology:true,
