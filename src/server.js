@@ -4,7 +4,7 @@ const routes = require("./routes");
 const cors= require("cors");
 const multer = require('multer');
 const upload = multer({ dest: 'uploads/' });
-
+const PORT = process.env.PORT || 3333;
 mongoose.connect("mongodb://localhost:27017/project_email",{
     useNewUrlParser:true,
     useUnifiedTopology:true,
@@ -21,6 +21,6 @@ server.use(cors());
 server.use(express.json());
 server.use(routes);
 server.use(express.urlencoded({ extended: true }));
-server.listen(3333);
+server.listen(PORT, ()=>console.log("servidor iniciado!");
 
 
