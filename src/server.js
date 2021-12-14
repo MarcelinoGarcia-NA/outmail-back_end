@@ -21,6 +21,6 @@ server.use(cors());
 server.use(express.json());
 server.use(routes);
 server.use(express.urlencoded({ extended: true }));
-server.listen(PORT, ()=>console.log("servidor iniciado!");
+server.listen(PORT);
 
 
