@@ -7,7 +7,7 @@
     "dev": "nodemon src/server.js"
   },
   "keywords": [],
-  "author": "Marcelino e Cleiton",
+  "author": "Marcelino",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
