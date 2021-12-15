@@ -6,14 +6,16 @@ const multer = require('multer');
 const upload = multer({ dest: 'uploads/' });
 const PORT = process.env.PORT || 3000;
 
-const { MongoClient } = require('mongodb');
-const uri = "mongodb+srv://mvitor97:mvitor1500@cluster0.wvw2d.mongodb.net/outmail?retryWrites=true&w=majority";
-const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
-client.connect(err => {
-  const collection = client.db("test").collection("devices");
-  // perform actions on the collection object
-  client.close();
+mongoose.connect("mongodb+srv://mvitor97:mvitor1500@cluster0.wvw2d.mongodb.net/outmail?retryWrites=true&w=majority",{
+    useNewUrlParser:true,
+    useUnifiedTopology:true,
+    useCreateIndex:true,
+    useFindAndModify: false
 });
+
+mongoose.set("useCreateIndex",true);
+
+module.exports = mongoose;
 
 
 
