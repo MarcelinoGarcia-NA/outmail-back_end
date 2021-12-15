@@ -28,12 +28,12 @@ module.exports = {
         const user= await User.deleteOne({_id: req.params.id});
         return res.json({message:"Usuário removido do banco de dados!"});
     },
-      
-    */
-      async list(req, res){
+        async list(req, res){
         const user= await User.find();
         return res.json(user);
     },
+    */
+    
     async finduser(req,res){
         const user= await User.findOne({email:req.params.email});
         return res.json(user.name);
