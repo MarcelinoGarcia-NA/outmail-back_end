@@ -5,7 +5,7 @@ const cors= require("cors");
 const multer = require('multer');
 const upload = multer({ dest: 'uploads/' });
 const PORT = process.env.PORT || 3000;
-mongoose.connect("https://data.mongodb-api.com/app/data-xmgsg/endpoint/data/beta",{
+mongoose.connect("mongodb+srv://mvitor97:<mvitor1500>@cluster0.wvw2d.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",{
     useNewUrlParser:true,
     useUnifiedTopology:true,
     useCreateIndex:true,
