@@ -12,9 +12,9 @@ const AuthMiddlewares= require('./middlewares/auth');
 
 
 routes.post("/users",UserController.store);
+routes.get("/users",UserController.list);
 
 /* 
-routes.get("/users",UserController.list);
 routes.put("/users/:id",UserController.update);
 routes.delete("/users/:id",UserController.destroy);*/
 routes.get("/users/:email",UserController.finduser);
