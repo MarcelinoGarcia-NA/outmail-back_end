@@ -22,10 +22,10 @@ routes.get("/users/:email",UserController.finduser);
 
 
 routes.post("/message",MessageController.store);
+routes.get("/message",AuthMiddlewares,MessageController.list);
 /*
 routes.put("/message/:id",MessageController.update);
-routes.get("/message",AuthMiddlewares,MessageController.list);
-routes.delete("/message/:id",MessageController.destroy);*/
+routes.delete("/message/:id",MessageController.destroy);
 routes.get("/message/:email_recipient",AuthMiddlewares,MessageController.findEmailRecipient);
 routes.get("/message/sender/:email_sender",AuthMiddlewares,MessageController.findEmailSender);
 
