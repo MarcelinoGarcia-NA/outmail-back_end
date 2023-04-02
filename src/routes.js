@@ -13,19 +13,18 @@ const AuthMiddlewares= require('./middlewares/auth');
 
 routes.post("/users",UserController.store);
 
-
-/* 
-routes.put("/users/:id",UserController.update);
 routes.get("/users",UserController.list);
+/*
+routes.put("/users/:id",UserController.update);
 routes.delete("/users/:id",UserController.destroy);*/
 routes.get("/users/:email",UserController.finduser);
 
 
 routes.post("/message",MessageController.store);
-routes.get("/message",AuthMiddlewares,MessageController.list);
 /*
 routes.put("/message/:id",MessageController.update);
-routes.delete("/message/:id",MessageController.destroy);
+routes.get("/message",AuthMiddlewares,MessageController.list);
+routes.delete("/message/:id",MessageController.destroy);*/
 routes.get("/message/:email_recipient",AuthMiddlewares,MessageController.findEmailRecipient);
 routes.get("/message/sender/:email_sender",AuthMiddlewares,MessageController.findEmailSender);
 
